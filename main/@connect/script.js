@@ -15246,7 +15246,7 @@ class Ys {
 }
 kn(Ys, "isSetup", !1);
 const H2 = [{
-    name: "Выжить в Интернете",
+    name: "Выжить в Котлете",
     tag: "survivetheinternet",
     wrapper: "marionette",
     isPublic: !0,
