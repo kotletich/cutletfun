@@ -24255,7 +24255,7 @@ class wW {
         if (!qe.isSupported) return;
         const e = CW();
         qe.set("twitchState", e);
-        const r = "av4y4dtrhlrtt35865rnzib94stqx2";
+        const r = "rfwnzjykovull527foy3lccp32jpbz";
         let n = `https://${window.location.hostname}`;
         window.location.hostname === "localhost" && (n = "http://localhost:9090/");
         let i = "https://id.twitch.tv/oauth2/authorize";
