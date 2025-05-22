@@ -33642,7 +33642,7 @@ const Xre = {
     nne = {
         CAMERA: "[b]ВНИМАНИЕ:[/b] Камера не обнаружена, но ты можешь сыграть без фото. Если что-то идёт не по плану, попробуй другой браузер.",
         STYLE: "[b]ВНИМАНИЕ:[/b] Версия твоего браузера устарела, и контроллер может работать некорректно.",
-        TOS: "ВНИМАНИЕ:\nКонтроллер работает со всеми серверами Jackbox, включая такие обходы, как Клюква!\nИспользуется форк Jackbox.Fun."
+        TOS: "[b]ВНИМАНИЕ:[/b] Контроллер работает со всеми серверами Jackbox, включая такие обходы, как Клюква!\nОригинальный сайт разработан командой What if."
     },
     ine = {
         BRANCH: Xre,
@@ -34505,7 +34505,7 @@ const jie = Or(Die, [
                     statusKey: this.code.length === this.codeLength && this.roomNotFound ? "STATUS.ROOM_NOT_FOUND" : "",
                     submitKey: "ACTION.PLAY"
                 };
-                let t = "Используй jackbox.tv";
+                let t = "Используй jackbox.fun";
                 return (e = this.game) != null && e.name && ((r = this.game) != null && r.isPublic || ts.isDevelopment()) && (t = this.game.name), this.isReconnectable ? {
                     canSubmit: this.canConnect,
                     statusKey: t,
