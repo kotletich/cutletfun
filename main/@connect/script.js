@@ -24288,7 +24288,7 @@ class wW {
             const n = await (await fetch("https://api.twitch.tv/helix/users", {
                 headers: {
                     Authorization: `Bearer ${e}`,
-                    "Client-ID": "av4y4dtrhlrtt35865rnzib94stqx2"
+                    "Client-ID": "rfwnzjykovull527foy3lccp32jpbz"
                 }
             })).json();
             if (!n || !n.data) return null;
