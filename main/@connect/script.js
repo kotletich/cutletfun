@@ -33642,7 +33642,7 @@ const Xre = {
     nne = {
         CAMERA: "[b]ВНИМАНИЕ:[/b] Камера не обнаружена, но ты можешь сыграть без фото. Если что-то идёт не по плану, попробуй другой браузер.",
         STYLE: "[b]ВНИМАНИЕ:[/b] Версия твоего браузера устарела, и контроллер может работать некорректно.",
-        TOS: "ВНИМАНИЕ: Контроллер работает со всеми серверами Jackbox, включая такие обходы, как Клюква!"
+        TOS: "ВНИМАНИЕ: Контроллер работает со всеми серверами Jackbox, включая такие обходы, как Клюква!\nОригинальный сайт разработан командой What if."
     },
     ine = {
         BRANCH: Xre,
@@ -34505,7 +34505,7 @@ const jie = Or(Die, [
                     statusKey: this.code.length === this.codeLength && this.roomNotFound ? "STATUS.ROOM_NOT_FOUND" : "",
                     submitKey: "ACTION.PLAY"
                 };
-                let t = "Используй jackbox.tv";
+                let t = "Используй jackbox.fun";
                 return (e = this.game) != null && e.name && ((r = this.game) != null && r.isPublic || ts.isDevelopment()) && (t = this.game.name), this.isReconnectable ? {
                     canSubmit: this.canConnect,
                     statusKey: t,
@@ -35469,7 +35469,7 @@ function bae(t, e, r, n, i, s) {
         tabindex: "0",
         onKeyup: e[0] || (e[0] = ka((...c) => t.onTwitchLoginClick && t.onTwitchLoginClick(...c), ["enter"])),
         onClick: e[1] || (e[1] = xn((...c) => t.onTwitchLoginClick && t.onTwitchLoginClick(...c), ["prevent"]))
-    }, Ye(t.$t("MENU.TWITCH")), 33)])), Re("li", null, [Re("a", {
+    }, Ye(t.$t("MENU.TWITCH")), 33)])), Re("li", Eae, [Re("a", mae, Ye(t.$t("MENU.MODERATOR")), 1)]), Re("li", null, [Re("a", {
         href: "https://jackboxgames.ru/faq/",
         target: "_blank",
         onClick: e[4] || (e[4] = c => t.onLinkClick("help"))
