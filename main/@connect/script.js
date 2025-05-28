@@ -35486,7 +35486,7 @@ function bae(t, e, r, n, i, s) {
         href: "https://jackboxgames.ru/",
         target: "_blank",
         onClick: e[5] || (e[5] = u => t.onLinkClick("merch"))
-    }, Ye(t.$t("MENU.MERCH")), 1)]), Gt(o), t.shouldShowPreferredBranch ? (we(), Li(f, {
+    }, Ye(t.$t("MENU.MAILING_LIST")), 1)]), Gt(o), t.shouldShowPreferredBranch ? (we(), Li(f, {
         key: 2
     })) : _t("", !0), Re("li", _ae, [Re("a", {
         class: "facebook",
