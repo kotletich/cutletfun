@@ -35508,6 +35508,7 @@ function bae(t, e, r, n, i, s) {
         onClick: e[10] || (e[10] = c => t.onLinkClick("https://www.instagram.com/playjackboxgames"))
     })]), Re("li", Tae, [Re("a", vae, Ye(t.version), 1)])])])
 }
+
 const xae = Or(cae, [
         ["render", bae],
         ["__scopeId", "data-v-d35c1006"]
