@@ -35456,57 +35456,60 @@ const fae = Or(sae, [
         href: "/manifest"
     };
 
-function bae(t, e, r, n, i, s) {
-    const o = sn("AppearanceRadio"),
-        f = sn("PreferredBranch");
-    return we(), Ie("nav", pae, [Re("ul", null, [t.isTwitchAuthenticated ? (we(), Ie("li", hae, [Re("a", {
+function Gie(t, e, r, n, i, s) {
+    const o = Ir("NewsletterSignup"),
+        f = Ir("AppearanceRadio"),
+        c = Ir("PreferredBranch"),
+        d = vi("t");
+    return we(), Ie("nav", Iie, [be("ul", null, [t.isTwitchAuthenticated ? (we(), Ie("li", Pie, [be("a", {
         role: "link",
         tabindex: "0",
-        onKeyup: e[2] || (e[2] = ka((...c) => t.onTwitchLogoutClick && t.onTwitchLogoutClick(...c), ["enter"])),
-        onClick: e[3] || (e[3] = xn((...c) => t.onTwitchLogoutClick && t.onTwitchLogoutClick(...c), ["prevent"]))
-    }, Ye(t.$t("MENU.LOGOUT")), 33)])) : (we(), Ie("li", dae, [Re("a", {
+        onKeyup: e[2] || (e[2] = Os((...p) => t.onTwitchLogoutClick && t.onTwitchLogoutClick(...p), ["enter"])),
+        onClick: e[3] || (e[3] = nn((...p) => t.onTwitchLogoutClick && t.onTwitchLogoutClick(...p), ["prevent"]))
+    }, He(t.$t("MENU.LOGOUT")), 33)])) : (we(), Ie("li", Nie, [be("a", {
         role: "link",
         tabindex: "0",
-        onKeyup: e[0] || (e[0] = ka((...c) => t.onTwitchLoginClick && t.onTwitchLoginClick(...c), ["enter"])),
-        onClick: e[1] || (e[1] = xn((...c) => t.onTwitchLoginClick && t.onTwitchLoginClick(...c), ["prevent"]))
-    }, Ye(t.$t("MENU.TWITCH")), 33)])), Re("li", Eae, [Re("a", mae, Ye(t.$t("MENU.MODERATOR")), 1)]), Re("li", null, [Re("a", {
+        onKeyup: e[0] || (e[0] = Os((...p) => t.onTwitchLoginClick && t.onTwitchLoginClick(...p), ["enter"])),
+        onClick: e[1] || (e[1] = nn((...p) => t.onTwitchLoginClick && t.onTwitchLoginClick(...p), ["prevent"]))
+    }, He(t.$t("MENU.TWITCH")), 33)])), be("li", Uie, [be("a", Die, He(t.$t("MENU.MODERATOR")), 1)]), be("li", null, [be("a", {
         href: "https://jackboxgames.ru/faq/",
         target: "_blank",
-        onClick: e[4] || (e[4] = c => t.onLinkClick("help"))
-    }, Ye(t.$t("MENU.HELP")), 1)]), Re("li", null, [Re("a", {
+        onClick: e[4] || (e[4] = p => t.onLinkClick("help"))
+    }, He(t.$t("MENU.HELP")), 1)]), be("li", null, [be("a", {
         href: "https://jackboxgames.ru/finder",
         target: "_blank",
-        onClick: e[5] || (e[5] = c => t.onLinkClick("merch"))
-    }, Ye(t.$t("MENU.MERCH")), 1)]), Re("li", null, [Re("a", {
+        onClick: e[5] || (e[5] = p => t.onLinkClick("merch"))
+    }, He(t.$t("MENU.MERCH")), 1)]), be("li", {
         role: "link",
         tabindex: "0",
-        onKeyup: e[6] || (e[6] = ka((...c) => t.onPastGamesClick && t.onPastGamesClick(...c), ["enter"])),
-        onClick: e[7] || (e[7] = xn((...c) => t.onPastGamesClick && t.onPastGamesClick(...c), ["prevent"]))
-    }, [ss(Ye(t.$t("MENU.PAST_GAMES")) + " ", 1), t.hasUnseenGames ? (we(), Ie("div", gae)) : _t("", !0)], 32)]), Re("li", null, [Re("a", {
+        onKeyup: e[6] || (e[6] = Os((...p) => t.onPastGamesClick && t.onPastGamesClick(...p), ["enter"])),
+        onClick: e[7] || (e[7] = nn((...p) => t.onPastGamesClick && t.onPastGamesClick(...p), ["prevent"]))
+    }, [be("a", null, [qi(He(t.$t("MENU.PAST_GAMES")) + " ", 1), t.hasUnseenGames ? (we(), Ie("div", Bie)) : dt("", !0)])], 32), be("li", null, [be("a", {
         href: "https://jackboxgames.ru/",
         target: "_blank",
-        onClick: e[5] || (e[5] = u => t.onLinkClick("merch"))
-    }, Ye(t.$t("MENU.MERCH")), 1)]), Gt(o), t.shouldShowPreferredBranch ? (we(), Li(f, {
+        onClick: e[5] || (e[5] = p => t.onLinkClick("merch"))
+    }, He(t.$t("MENU.MAILING_LIST")), 1)]),
+    At(f), t.shouldShowPreferredBranch ? (we(), jn(c, {
         key: 2
-    })) : _t("", !0), Re("li", _ae, [Re("a", {
+    })) : dt("", !0), be("li", $ie, [be("a", {
         class: "facebook",
         "aria-label": "facebook",
         target: "_blank",
         href: "https://www.facebook.com/JackboxGames",
-        onClick: e[8] || (e[8] = c => t.onLinkClick("https://www.facebook.com/JackboxGames"))
-    }), Re("a", {
+        onClick: e[8] || (e[8] = p => t.onLinkClick("https://www.facebook.com/JackboxGames"))
+    }), be("a", {
         class: "twitter",
         "aria-label": "twitter",
         target: "_blank",
         href: "https://twitter.com/jackboxgames",
-        onClick: e[9] || (e[9] = c => t.onLinkClick("https://twitter.com/jackboxgames"))
-    }), Re("a", {
+        onClick: e[9] || (e[9] = p => t.onLinkClick("https://twitter.com/jackboxgames"))
+    }), be("a", {
         class: "instagram",
         "aria-label": "instagram",
         target: "_blank",
         href: "https://www.instagram.com/playjackboxgames",
-        onClick: e[10] || (e[10] = c => t.onLinkClick("https://www.instagram.com/playjackboxgames"))
-    })]), Re("li", Tae, [Re("a", vae, Ye(t.version), 1)])])])
+        onClick: e[10] || (e[10] = p => t.onLinkClick("https://www.instagram.com/playjackboxgames"))
+    })]), be("li", Kie, [be("a", kie, He(t.version), 1)])])])
 }
 const xae = Or(cae, [
         ["render", bae],
