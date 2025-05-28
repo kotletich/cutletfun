@@ -15808,6 +15808,18 @@ class Ks {
 }
 Kr(Ks, "isSetup", !1);
 const _k = [{
+    name: "Prototype",
+    tag: "prototype",
+    wrapper: "vue",
+    isPublic: !0,
+    directory: "internal/prototype"
+}, {
+    name: "EcastTestClient",
+    tag: "ecast-test-client",
+    wrapper: "marionette",
+    isPublic: !0,
+    directory: "internal/ecast-test-client"
+}, {
     name: "Выжить в Котлете",
     tag: "survivetheinternet",
     wrapper: "marionette",
@@ -33193,7 +33205,7 @@ const nte = {
     Ete = {
         CAMERA: "[b]ВНИМАНИЕ:[/b] Камера не обнаружена, но ты можешь сыграть без фото. Если что-то идёт не по плану, попробуй другой браузер.",
         STYLE: "[b]ВНИМАНИЕ:[/b] Версия твоего браузера устарела, и контроллер может работать некорректно.",
-        TOS: "ВНИМАНИЕ: Контроллер работает со всеми серверами Jackbox, включая такие обходы, как Клюква!\nОригинальный сайт 'jackbox.fun' разработан командой \"What if?\".\nНажимая {submit}, вы принимаете условия [tos]Соглашения (англ.)[/tos]"
+        TOS: "ВНИМАНИЕ: Контроллер работает со всеми серверами Jackbox, включая такие обходы, как Клюква!\nОригинальный сайт 'jackbox.fun' разработан командой \"What if?\"."
     },
     mte = {
         BRANCH: nte,
