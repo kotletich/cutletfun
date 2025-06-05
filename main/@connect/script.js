@@ -31757,44 +31757,44 @@ fc.BBCodeParser = FJ;
 const HJ = {
     install: t => {
         const e = {
-            section: fi.Tag.create("section", (s, o, { section: f }) => 
-                `<div ${f ? `class="section ${f}"` : 'class="section"'}>${o}</div>`
+            section: fi.Tag.create("section", (attrs, content, { section: f }) => 
+                `<div ${f ? `class="section ${f}"` : 'class="section"'}>${content}</div>`
             )
         };
 
         ["b", "bold", "B"].forEach(s => {
-            e[s] = fi.Tag.create(s, (o, f) => `<strong>${f}</strong>`);
+            e[s] = fi.Tag.create(s, (attrs, content) => `<strong>${content}</strong>`);
         });
 
         ["i", "italic", "I"].forEach(s => {
-            e[s] = fi.Tag.create(s, (o, f) => `<em>${f}</em>`);
+            e[s] = fi.Tag.create(s, (attrs, content) => `<em>${content}</em>`);
         });
 
-        e.tos = fi.Tag.create("tos", (s, o) => 
-            `<a class="tosLink" href="https://jackboxgames.com/terms-of-service/" target="_blank">${o}</a>`
+        e.tos = fi.Tag.create("tos", (attrs, content) => 
+            `<a class="tosLink" href="https://jackboxgames.com/terms-of-service/" target="_blank">${content}</a>`
         );
 
-        e.pp = fi.Tag.create("pp", (s, o) => 
-            `<a class="ppLink" href="https://jackboxgames.com/privacy-policy/" target="_blank">${o}</a>`
+        e.pp = fi.Tag.create("pp", (attrs, content) => 
+            `<a class="ppLink" href="https://jackboxgames.com/privacy-policy/" target="_blank">${content}</a>`
         );
 
         e.url = fi.Tag.create("url", (attrs, content) => {
-            const href = attrs && attrs.url ? attrs.url : content;
+            const href = typeof attrs === "string" && attrs.trim() !== "" ? attrs : content;
             return `<a href="${href}" target="_blank" rel="noopener noreferrer">${content}</a>`;
         });
 
         const i = new fi.BBCodeParser(e);
 
         t.directive("bb", {
-            mounted(s, o) {
-                const f = document.createElement("div");
-                f.textContent = o.value;
-                s.innerHTML = i.parse(f.innerHTML);
+            mounted(el, binding) {
+                const div = document.createElement("div");
+                div.textContent = binding.value;
+                el.innerHTML = i.parse(div.innerHTML);
             },
-            updated(s, o) {
-                const f = document.createElement("div");
-                f.textContent = o.value;
-                s.innerHTML = i.parse(f.innerHTML);
+            updated(el, binding) {
+                const div = document.createElement("div");
+                div.textContent = binding.value;
+                el.innerHTML = i.parse(div.innerHTML);
             }
         });
 
@@ -31805,9 +31805,9 @@ const HJ = {
                         const o = this.$options.bb[s];
                         if (o instanceof Function) {
                             i.addTag(s, fi.Tag.create(s, o));
-                            return;
+                        } else {
+                            i.addTag(s, fi.Tag.create(s, o.generator, o.options));
                         }
-                        i.addTag(s, fi.Tag.create(s, o.generator, o.options));
                     });
                 }
             }
