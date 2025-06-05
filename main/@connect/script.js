@@ -31757,37 +31757,68 @@ fc.BBCodeParser = FJ;
 const HJ = {
     install: t => {
         const e = {
-            section: fi.Tag.create("section", (s, o, {
-                section: f
-            }) => `<div ${f?`class="section ${f}"`:'class="section"'}>${o}</div>`)
+            section: fi.Tag.create("section", (s, o, { section: f }) => 
+                `<div ${f ? `class="section ${f}"` : 'class="section"'}>${o}</div>`
+            )
         };
+
         ["b", "bold", "B"].forEach(s => {
-            e[s] = fi.Tag.create(s, (o, f) => `<strong>${f}</strong>`)
-        }), ["i", "italic", "I"].forEach(s => {
-            e[s] = fi.Tag.create(s, (o, f) => `<em>${f}</em>`)
-        }), e.tos = fi.Tag.create("tos", (s, o) => `<a class="tosLink" href="https://jackboxgames.com/terms-of-service/" target="_blank">${o}</a>`), e.pp = fi.Tag.create("pp", (s, o) => `<a class="ppLink" href="https://jackboxgames.com/privacy-policy/" target="_blank">${o}</a>`);
+            e[s] = fi.Tag.create(s, (o, f) => `<strong>${f}</strong>`);
+        });
+
+        ["i", "italic", "I"].forEach(s => {
+            e[s] = fi.Tag.create(s, (o, f) => `<em>${f}</em>`);
+        });
+
+        e.tos = fi.Tag.create("tos", (s, o) => 
+            `<a class="tosLink" href="https://jackboxgames.com/terms-of-service/" target="_blank">${o}</a>`
+        );
+
+        e.pp = fi.Tag.create("pp", (s, o) => 
+            `<a class="ppLink" href="https://jackboxgames.com/privacy-policy/" target="_blank">${o}</a>`
+        );
+
+        e.url = fi.Tag.create("url", (attrs, content) => {
+            const href = attrs && attrs.url ? attrs.url : content;
+            return `<a href="${href}" target="_blank" rel="noopener noreferrer">${content}</a>`;
+        });
+
         const i = new fi.BBCodeParser(e);
+
         t.directive("bb", {
             mounted(s, o) {
                 const f = document.createElement("div");
-                f.textContent = o.value, s.innerHTML = i.parse(f.innerHTML)
+                f.textContent = o.value;
+                s.innerHTML = i.parse(f.innerHTML);
             },
             updated(s, o) {
                 const f = document.createElement("div");
-                f.textContent = o.value, s.innerHTML = i.parse(f.innerHTML)
+                f.textContent = o.value;
+                s.innerHTML = i.parse(f.innerHTML);
             }
-        }), t.mixin({
+        });
+
+        t.mixin({
             beforeCreate() {
-                this.$options.bb && Object.keys(this.$options.bb).forEach(s => {
-                    const o = this.$options.bb[s];
-                    if (o instanceof Function) {
-                        i.addTag(s, fi.Tag.create(s, o));
-                        return
-                    }
-                    i.addTag(s, fi.Tag.create(s, o.generator, o.options))
-                })
+                if (this.$options.bb) {
+                    Object.keys(this.$options.bb).forEach(s => {
+                        const o = this.$options.bb[s];
+                        if (o instanceof Function) {
+                            i.addTag(s, fi.Tag.create(s, o));
+                            return;
+                        }
+                        i.addTag(s, fi.Tag.create(s, o.generator, o.options));
+                    });
+                }
             }
-        }), t.config.globalProperties.$bb = s => (typeof s != "string" && console.warn(`[BBCodePlugin] Received unexpected ${typeof s} with value ${s};converting to string before parsing.`), i.parse(String(s)))
+        });
+
+        t.config.globalProperties.$bb = s => {
+            if (typeof s !== "string") {
+                console.warn(`[BBCodePlugin] Received unexpected ${typeof s} with value ${s}; converting to string before parsing.`);
+            }
+            return i.parse(String(s));
+        };
     }
 };
 var WJ = fS,
@@ -33205,7 +33236,7 @@ const nte = {
     Ete = {
         CAMERA: "[b]ВНИМАНИЕ:[/b] Камера не обнаружена, но ты можешь сыграть без фото. Если что-то идёт не по плану, попробуй другой браузер.",
         STYLE: "[b]ВНИМАНИЕ:[/b] Версия твоего браузера устарела, и контроллер может работать некорректно.",
-	TOS: "ВНИМАНИЕ: Контроллер работает со всеми серверами Jackbox, включая такие обходы, как Клюква!\nОригинальный сайт jackbox.fun разработан командой \"What if?\"."
+	TOS: "ВНИМАНИЕ: Контроллер работает со всеми серверами Jackbox, включая такие обходы, как [url=https://t.me/JackboxServers]Клюква[/url]!\nОригинальный сайт [url]jackbox.fun[/url] разработан командой \"What if?\"."
     },
     mte = {
         BRANCH: nte,
