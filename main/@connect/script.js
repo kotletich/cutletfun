@@ -31770,10 +31770,6 @@ const HJ = {
             e[s] = fi.Tag.create(s, (attrs, content) => `<em>${content}</em>`);
         });
 
-        e.tos = fi.Tag.create("tos", (attrs, content) => 
-            `<a class="tosLink" href="https://jackboxgames.com/terms-of-service/" target="_blank">${content}</a>`
-        );
-
         e.pp = fi.Tag.create("pp", (attrs, content) => 
             `<a class="ppLink" href="https://jackboxgames.com/privacy-policy/" target="_blank">${content}</a>`
         );
@@ -33236,7 +33232,7 @@ const nte = {
     Ete = {
         CAMERA: "[b]ВНИМАНИЕ:[/b] Камера не обнаружена, но ты можешь сыграть без фото. Если что-то идёт не по плану, попробуй другой браузер.",
         STYLE: "[b]ВНИМАНИЕ:[/b] Версия твоего браузера устарела, и контроллер может работать некорректно.",
-	TOS: "ВНИМАНИЕ: Контроллер работает со всеми серверами Jackbox, включая такие обходы, как [url=https://t.me/JackboxServers]Клюква[/url]!\nОригинальный сайт [url]jackbox.fun[/url] разработан командой \"What if?\"."
+	TOS: "ВНИМАНИЕ: Контроллер работает со всеми серверами Jackbox, включая такие обходы, как Клюква!\nОригинальный сайт jackbox.fun разработан командой \"What if?\"."
     },
     mte = {
         BRANCH: nte,
