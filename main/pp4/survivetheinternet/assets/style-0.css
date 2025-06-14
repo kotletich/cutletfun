@@ -23529,13 +23529,8 @@ button {
 .survivetheinternet .finalRoundImage.CatVerySad {
     background-image: url(finalRoundImage/CatVerySad.jpg);
 }
-<<<<<<< HEAD
-.survivetheinternet .finalRoundImage.CatVita;ik {
-    background-image: url(finalRoundImage/CatVita;ik.jpg);
-=======
 .survivetheinternet .finalRoundImage.CatVitalik {
     background-image: url(finalRoundImage/CatVitalik.jpg);
->>>>>>> 999c809402a7b8221f6e51d3c86c793550752ba8
 }
 .survivetheinternet .finalRoundImage.CatVo {
     background-image: url(finalRoundImage/CatVo.jpg);
@@ -24131,17 +24126,10 @@ button {
     background-image: url('finalRoundImage/CatVerySad.jpg');
     background-size: contain;
 }
-<<<<<<< HEAD
-.survivetheinternet .CatVita;ik-thumb {
-    width: 120px;
-    height: 90px;
-    background-image: url('finalRoundImage/CatVita;ik.jpg');
-=======
 .survivetheinternet .CatVitalik-thumb {
     width: 120px;
     height: 90px;
     background-image: url('finalRoundImage/CatVitalik.jpg');
->>>>>>> 999c809402a7b8221f6e51d3c86c793550752ba8
     background-size: contain;
 }
 .survivetheinternet .CatVo-thumb {
