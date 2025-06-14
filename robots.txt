@@ -1,0 +1,8 @@
+User-agent: *
+Crawl-delay: 10
+Disallow: /cgi-bin		# классика...
+Disallow: /?			# все параметры запроса на главной
+Disallow: /admin/		# robots don't need admin features
+Disallow: /content/		# контент
+Disallow: /fonts/		# шрифты не нужны
+Disallow: /images/		# роботы не видят картинки
