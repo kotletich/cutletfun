@@ -35303,7 +35303,7 @@ function Gie(t, e, r, n, i, s) {
         onKeyup: e[6] || (e[6] = Os((...p) => t.onPastGamesClick && t.onPastGamesClick(...p), ["enter"])),
         onClick: e[7] || (e[7] = nn((...p) => t.onPastGamesClick && t.onPastGamesClick(...p), ["prevent"]))
     }, [be("a", null, [qi(He(t.$t("MENU.PAST_GAMES")) + " ", 1), t.hasUnseenGames ? (we(), Ie("div", Bie)) : dt("", !0)])], 32), be("li", null, [be("a", {
-        href: "https://jackboxgames.ru/",
+        href: "https://sdvgbox.online/",
         target: "_blank",
         onClick: e[5] || (e[5] = p => t.onLinkClick("merch"))
     }, He(t.$t("MENU.MAILING_LIST")), 1)]),
