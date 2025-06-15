@@ -14,7 +14,7 @@
     }
   </style>
   <text kerning="auto" fill="rgb(0, 0, 0)" transform="matrix( 1.0168, 0, 0, 1.0168,20, 174.42)" font-size="240.667px">
-    <tspan fill="#4254f4" font-family="SS Norm" font-size="230.667px">sdvgbox.ru</tspan>
-    <tspan font-family="SS Italic" font-size="230.667px fill="#FFFFFF">Mogepamop</tspan>
+  <tspan fill="#4254f4" font-family="SS Norm" font-size="230.667px">sdvgbox.ru</tspan>
+  <tspan fill="#FFFFFF" font-family="SS Italic" font-size="230.667px">Mogepamop</tspan>
   </text>
 </svg>
