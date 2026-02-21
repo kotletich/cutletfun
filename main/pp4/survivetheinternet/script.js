@@ -21132,34 +21132,22 @@ const Ux = Ct.View.extend({
                     }
                 }]
             },
-			".voteThumbnail": {
-			    observe: "thumbnail",
-			    updateMethod: "html",
-			    visible: !0,
-			    attributes: [
-			        {
-			            name: "class",
-			            observe: "thumbnail",
-			            onGet(t) {
-			                const n = (t || "").match(/images\/survivetheinternet\/photos\/([a-zA-Z]+-thumb)\.jpg/);
-			                return n ? n[1] : ""
-			            }
-			        }, 
-			        {
-			            name: "style",
-			            observe: "thumbnail",
-			            onGet(t) {
-			                const n = (t || "").match(/images\/survivetheinternet\/photos\/([a-zA-Z]+-thumb)\.jpg/);
-			                if (n) {
-			                    const name = n[1].replace("-thumb", ""); // убираем -thumb
-			                    return `--bg: url(STIGiphy/${name}.webp)`;
-			                }
-			                return "";
-			            }
-			        },
-			        { name: "aria-label", observe: "altText" }
-			    ]
-			},
+            ".voteThumbnail": {
+                observe: "thumbnail",
+                updateMethod: "html",
+                visible: !0,
+                attributes: [{
+                    name: "class",
+                    observe: "thumbnail",
+                    onGet(t) {
+                        const n = (t || "").match(/images\/survivetheinternet\/photos\/([a-zA-Z]+-thumb)\.jpg/);
+                        return n ? n[1] : ""
+                    }
+                }, {
+                    name: "aria-label",
+                    observe: "altText"
+                }]
+            },
             ".voteText": {
                 observe: "text",
                 updateMethod: "html"
@@ -21401,35 +21389,38 @@ const Qx = Fx.extend({
                 return -1
         }
     },
-	parseBlob(t) {
-	    if (t.playerInfo = t.playerInfo || {}, t.playerInfo.username = t.playerName || "Зритель", t.playerInfo.color && (t.playerInfo.avatar = t.playerInfo.color.frame, t.playerInfo.topBarColor = t.playerInfo.color.dark.hexString, t.playerInfo.bgColor = t.playerInfo.color.veryLight.hexString, t.playerInfo.textColor = t.playerInfo.color.veryLight.hexString, t.playerInfo.buttonColor = t.playerInfo.color.dark.hexString), t.state === "Gameplay" && (t.state = "Logo"), t.state === "Lobby" && (this.client.isRole("player") || (t.state = "Logo"), t.playerIsVIP = t.isAllowedToStartGame, t.playerCanStartGame = t.isAllowedToStartGame, t.playerCanCensor = t.canCensor, t.gameCanStart = ["CanStart", "Countdown", "PostGame"].indexOf(t.lobbyState) !== -1, t.gameIsStarting = t.lobbyState === "Countdown", t.gameFinished = t.lobbyState === "PostGame"), t.censorablePlayers && delete t.censorablePlayers, t.state === "EnterSingleText" && t.text && t.text.aboveBlackBox) {
-	        const e = t.text.aboveBlackBox.match(/images\/survivetheinternet\/photos\/([a-zA-Z]+)\.jpg/);
-	        if (e) {
-	            const n = e[1];
-	            const i = this.altTexts[n];
-	            t.text.aboveBlackBox = `<div class='finalRoundImage ${n}' style='--bg: url(STIGiphy/${n}.webp)' aria-label='${i}'></div>`;
-	        }
-	    }
-	    if (t.state === "Voting" && (t.choices = t.choices.map(e => {
-	            if (!e.thumbnail) return e;
-	            const n = e.thumbnail.match(/images\/survivetheinternet\/photos\/([a-zA-Z]+)-thumb\.jpg/);
-	            if (n) {
-	                const i = n[1].replace("-thumb", ""),
-	                    a = this.altTexts[i];
-	                e.altText = a;
-	                e.customBg = `STIGiphy/${i}.webp`;
-	            }
-	            return e
-	        })), t.state === "MakeSingleChoice" && t.text && t.text.blackBox) {
-	        const e = t.text.blackBox.match(/(.*)<img src='images\/survivetheinternet\/photos\/([a-zA-Z]+)\.jpg'\/>(.*)/);
-	        if (e) {
-	            const n = e[2];
-	            const i = this.altTexts[n];
-	            t.text.blackBox = `${e[1]}<div class='finalRoundImage ${n}' style='--bg: url(STIGiphy/${n}.webp)' aria-label='${i}'></div>${e[3]}`;
-	        }
-	    }
-	    return t
-	},
+    parseBlob(t) {
+        if (t.playerInfo = t.playerInfo || {}, t.playerInfo.username = t.playerName || "Зритель", t.playerInfo.color && (t.playerInfo.avatar = t.playerInfo.color.frame, t.playerInfo.topBarColor = t.playerInfo.color.dark.hexString, t.playerInfo.bgColor = t.playerInfo.color.veryLight.hexString, t.playerInfo.textColor = t.playerInfo.color.veryLight.hexString, t.playerInfo.buttonColor = t.playerInfo.color.dark.hexString), t.state === "Gameplay" && (t.state = "Logo"), t.state === "Lobby" && (this.client.isRole("player") || (t.state = "Logo"), t.playerIsVIP = t.isAllowedToStartGame, t.playerCanStartGame = t.isAllowedToStartGame, t.playerCanCensor = t.canCensor, t.gameCanStart = ["CanStart", "Countdown", "PostGame"].indexOf(t.lobbyState) !== -1, t.gameIsStarting = t.lobbyState === "Countdown", t.gameFinished = t.lobbyState === "PostGame"), t.censorablePlayers && delete t.censorablePlayers, t.state === "EnterSingleText" && t.text && t.text.aboveBlackBox) {
+            const e = t.text.aboveBlackBox.match(/images\/survivetheinternet\/photos\/([a-zA-Z]+)\.jpg/);
+            if (e) {
+                const n = e[1],
+                    i = this.altTexts[n];
+                t.text.aboveBlackBox = `<div class='finalRoundImage ${n}' aria-label='${i}'></div>`
+            }
+        }
+        if (t.state === "Voting" && (t.choices = t.choices.map(e => {
+                if (!e.thumbnail) return e;
+                const n = e.thumbnail.match(/images\/survivetheinternet\/photos\/([a-zA-Z]+)-thumb\.jpg/);
+                if (n) {
+                    const i = n[1].replace("-thumb", ""),
+                        a = this.altTexts[i];
+                    e.altText = a
+                }
+                return e
+            })), t.state === "MakeSingleChoice" && t.text && t.text.blackBox) {
+            const e = t.text.blackBox.match(/(.*)<img src='images\/survivetheinternet\/photos\/([a-zA-Z]+)\.jpg'\/>(.*)/);
+            if (e) {
+                const n = e[2],
+                    i = this.altTexts[n];
+                t.text.blackBox = `${e[1]}<div class='finalRoundImage ${n}' aria-label='${i}'></div>${e[3]}`
+            }
+        }
+        return t
+    },
+    formatSessionMessage(t) {
+        return t.action === "start" && (t.start = !0), t.action === "cancel" && (t.cancel = !0), t.action === "PostGame_Continue" && (t.start = !0, t.decision = "PostGame_Continue"), t.action === "PostGame_NewGame" && (t.start = !0, t.decision = "PostGame_NewGame"), t
+    }
+});
 qx({
     MainView: Qx
 });
