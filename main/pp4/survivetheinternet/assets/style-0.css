@@ -23390,6 +23390,71 @@ button {
         height: 67.4603174603vw
     }
 }
+/* гифочки */
+.survivetheinternet .finalRoundImage.bearReading {
+    background-image: url(STIGiphy/bearReading.webp);
+}
+
+.survivetheinternet .finalRoundImage.bosinnMetersFromYou {
+    background-image: url(STIGiphy/bosinnMetersFromYou.webp);
+}
+
+.survivetheinternet .finalRoundImage.brickLady {
+    background-image: url(STIGiphy/brickLady.webp);
+}
+
+.survivetheinternet .finalRoundImage.catBoom {
+    background-image: url(STIGiphy/catBoom.webp);
+}
+
+.survivetheinternet .finalRoundImage.copScreaming {
+    background-image: url(STIGiphy/copScreaming.webp);
+}
+
+.survivetheinternet .finalRoundImage.eureka {
+    background-image: url(STIGiphy/eureka.webp);
+}
+
+.survivetheinternet .finalRoundImage.godIs2000MetersAway {
+    background-image: url(STIGiphy/godIs2000MetersAway.webp);
+}
+
+.survivetheinternet .finalRoundImage.helpImHostage {
+    background-image: url(STIGiphy/helpImHostage.webp);
+}
+
+.survivetheinternet .finalRoundImage.iFindYouAndKickYourButt {
+    background-image: url(STIGiphy/iFindYouAndKickYourButt.webp);
+}
+
+.survivetheinternet .finalRoundImage.kanevskiyPivo {
+    background-image: url(STIGiphy/kanevskiyPivo.webp);
+}
+
+.survivetheinternet .finalRoundImage.legoWow {
+    background-image: url(STIGiphy/legoWow.webp);
+}
+
+.survivetheinternet .finalRoundImage.manInShower {
+    background-image: url(STIGiphy/manInShower.webp);
+}
+
+.survivetheinternet .finalRoundImage.nicAvoDrinking {
+    background-image: url(STIGiphy/nicAvoDrinking.webp);
+}
+
+.survivetheinternet .finalRoundImage.pandaCrazy {
+    background-image: url(STIGiphy/pandaCrazy.webp);
+}
+
+.survivetheinternet .finalRoundImage.sorryButNo {
+    background-image: url(STIGiphy/sorryButNo.webp);
+}
+
+.survivetheinternet .finalRoundImage.walterWhiteTarelka {
+    background-image: url(STIGiphy/walterWhiteTarelka.webp);
+}
+
 
 .survivetheinternet .finalRoundImage.CatAhuet {
     background-image: url(finalRoundImage/CatAhuet.jpg);
@@ -24751,6 +24816,70 @@ button {
     background-size: contain;
 }
 
+/* гифочки 2 тамб*/
+.survivetheinternet .bearReading-thumb {
+    background-image: url(STIGiphy/bearReading.webp);
+}
+
+.survivetheinternet .bosinnMetersFromYou-thumb {
+    background-image: url(STIGiphy/bosinnMetersFromYou.webp);
+}
+
+.survivetheinternet .brickLady-thumb {
+    background-image: url(STIGiphy/brickLady.webp);
+}
+
+.survivetheinternet .catBoom-thumb {
+    background-image: url(STIGiphy/catBoom.webp);
+}
+
+.survivetheinternet .copScreaming-thumb {
+    background-image: url(STIGiphy/copScreaming.webp);
+}
+
+.survivetheinternet .eureka-thumb {
+    background-image: url(STIGiphy/eureka.webp);
+}
+
+.survivetheinternet .godIs2000MetersAway-thumb {
+    background-image: url(STIGiphy/godIs2000MetersAway.webp);
+}
+
+.survivetheinternet .helpImHostage-thumb {
+    background-image: url(STIGiphy/helpImHostage.webp);
+}
+
+.survivetheinternet .iFindYouAndKickYourButt-thumb {
+    background-image: url(STIGiphy/iFindYouAndKickYourButt.webp);
+}
+
+.survivetheinternet .kanevskiyPivo-thumb {
+    background-image: url(STIGiphy/kanevskiyPivo.webp);
+}
+
+.survivetheinternet .legoWow-thumb {
+    background-image: url(STIGiphy/legoWow.webp);
+}
+
+.survivetheinternet .manInShower-thumb {
+    background-image: url(STIGiphy/manInShower.webp);
+}
+
+.survivetheinternet .nicAvoDrinking-thumb {
+    background-image: url(STIGiphy/nicAvoDrinking.webp);
+}
+
+.survivetheinternet .pandaCrazy-thumb {
+    background-image: url(STIGiphy/pandaCrazy.webp);
+}
+
+.survivetheinternet .sorryButNo-thumb {
+    background-image: url(STIGiphy/sorryButNo.webp);
+}
+
+.survivetheinternet .walterWhiteTarelka-thumb {
+    background-image: url(STIGiphy/walterWhiteTarelka.webp);
+}
 
 .survivetheinternet .censor-button {
     width: auto;
