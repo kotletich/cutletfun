@@ -35629,10 +35629,6 @@ window.tv.register({
         let e = WD(fse, {
             options: t
         });
-        e.use(rte({
-            id: "GTM-P35CHT27",
-            defer: !0
-        }));
         let r;
         (i = t.match) != null && i.params.locale && (r = t.match.params.locale), Oa.set(r);
         const n = IM({
